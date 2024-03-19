@@ -1,0 +1,57 @@
+git init - incia o repositorio git
+
+git clone - faz o clone do repositorio remoto
+
+git status - apresenta o satatus do repositorio local
+
+git add <arquivo> - adiciona o arquivo modificado ou nao rastreado para o proximo commit
+
+git add . - adiciona todos os arquivos modificados ou nao rastreados no diretorio atual
+
+INICIAR REPOSITÓRIO (PROJETO)
+
+1-Configurar o usuário local do git
+    git config --global user.name "Seu nome"
+    git config --global user.email "seuemail@email.com"
+
+-Iniciar o repositório remoto e fazer o primeiro commit
+    git init
+    git add README.md (opcional, caso você não tenha o README)
+    git commit -m "first commit"
+    git branch -M main (provavelmente muda a branch para main)
+    git remote add origin [https://github.com/GabiVictoria/Teeeeste.git (url do seu rep)]
+    git push -u origin main
+
+(CLONE) REPOSITÓRIO REMOTO 
+
+1-Configurar o usuário local do git
+    git config --global user.name "Seu nome"
+    git config --global user.email "seuemail@email.com"
+
+2-Fazer o clone do seu repositório no GitHub
+    git clone https://github.com/SEU_USUARIO/lp3-ifsp.git
+
+3-Abrir o repo no VSCode
+    code lp3-ifsp
+
+3.1-Commit
+    git add .
+    git commit -m "(descrição do commit)"
+
+4-Criar um token para realizar os pushs
+    Settings -> Developer settings -> Personal access tokens -> Tokens (classic) Generate new token, selecionar a opção Generate new token classic, marcar a opção scope repo.
+
+5-Push
+    git remote add origin https://github.com/GabiVictoria/Teeeeste.git
+    git branch -M main
+    git push -u origin main
+
+CONFIDENCIALIDADE DO SEUS DADOS (PARA SAIR DA MÁQUINA)
+
+1-Remover configurações de usuário do git local
+    git config --global --unset user.name
+    git config --global --unset user.email
+
+2-Deletar o token no GitHub
+
+3-Deslogar do GitHub
